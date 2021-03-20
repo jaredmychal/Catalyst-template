@@ -198,7 +198,7 @@ sce <- runDR(sce, dr = "UMAP", cells = 5000, features = f,  n_neighbors = 80, sc
 sce <- runDR(sce, dr = "TSNE", cells = 5000, features = f, perplexity = 80, pca = FALSE, normalize = FALSE, theta = 0.5, exaggeration_factor = 5, stop_lying_iter = 500, eta = 500, max_iter = 5000, num_threads = 16, verbose = TRUE)
 
 #Run a script to generate tSNE and UMAP plots of dimensionality reduction clusters
-source('D:/R_scripts/plot_dr_all.R')
+source('R_scripts/plot_dr_all.R')
 
 
 saveRDS(sce, "sce_DR.RDS")
@@ -278,15 +278,15 @@ setwd("Output/annotated")
 OutputDirectory <- getwd()
 setwd(OutputDirectory)
 
-source('D:/R_scripts/day.R')
-source('D:/R_scripts/marker_mapping.R')
-source('D:/R_scripts/nosocomial.R')
-source('D:/R_scripts/group.R')
-source('D:/R_scripts/abx.R')
-source('D:/R_scripts/SOFA.R')
-source('D:/R_scripts/mortality.R')
-source('D:/R_scripts/annotated_plots.R')
-source('D:/R_scripts/cluster_plots.R')
+source('R_scripts/day.R')
+source('R_scripts/marker_mapping.R')
+source('R_scripts/nosocomial.R')
+source('R_scripts/group.R')
+source('R_scripts/abx.R')
+source('R_scripts/SOFA.R')
+source('R_scripts/mortality.R')
+source('R_scripts/annotated_plots.R')
+source('R_scripts/cluster_plots.R')
 
 setwd(PrimaryDirectory)
 
