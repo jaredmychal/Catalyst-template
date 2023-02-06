@@ -76,6 +76,8 @@ sce <- prepData(fs, panel, md, features = panel$fcs_colname,
 #save SCE file 
 saveRDS(sce, "sce.RDS")
 
+assay(sce, "exprs") <- limma::removeBatchEffect(assay(sce, "exprs"), batch = sce$batch, design = model.matrix(~sce$Group))
+
 
 ##########################################################################################################
 #### 3. Diagnostic plots
